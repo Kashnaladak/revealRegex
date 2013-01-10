@@ -1,0 +1,38 @@
+/**
+ * Sky theme for reveal.js.
+ * 
+ * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+
+// Include theme-specific fonts
+@import url(http://fonts.googleapis.com/css?family=Fjalla+One);
+
+
+// Override theme settings (see ../template/settings.scss)
+$mainFont: 'Fjalla One', sans-serif;
+$mainColor: #222;
+$headingFont: 'Fjalla One', sans-serif;
+$headingColor: #333;
+$headingLetterSpacing: -0.08em;
+$headingTextShadow: none;
+$backgroundColor: #f7fbfc;
+$linkColor: #3b759e;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: #134674;
+
+// Background generator
+@mixin bodyBackground() {
+  @include radial-gradient(#CCC, #FFF);
+}
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
