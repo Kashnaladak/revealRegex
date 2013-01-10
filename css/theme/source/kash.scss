@@ -10,23 +10,22 @@
 @import "../template/settings";
 // ---------------------------------------------
 
-
-
 // Include theme-specific fonts
 @import url(http://fonts.googleapis.com/css?family=Fjalla+One);
-
 
 // Override theme settings (see ../template/settings.scss)
 $mainFont: 'Fjalla One', sans-serif;
 $mainColor: #222;
+$mainFontSize: 100px;
+
 $headingFont: 'Fjalla One', sans-serif;
 $headingColor: #333;
 $headingLetterSpacing: -0.08em;
 $headingTextShadow: none;
 $backgroundColor: #f7fbfc;
-$linkColor: #3b759e;
+$linkColor: #A00;
 $linkColorHover: lighten( $linkColor, 20% );
-$selectionBackgroundColor: #134674;
+$selectionBackgroundColor: #000;
 
 // Background generator
 @mixin bodyBackground() {
@@ -36,3 +35,34 @@ $selectionBackgroundColor: #134674;
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
+
+
+
+
+strong {
+  color: #A00;
+}
+.huge {
+  font-size: 200px !important;
+}
+.pattern {
+  color: #BF6718;
+}
+.match {
+  color: #8C0000;
+}
+.nomatch {
+  color: #888;
+}
+.ok:after {
+  content: "\2714";
+  color: #080;
+}
+.nok:after {
+  content: "\2717";
+  color: #F00;
+}
+.subject {
+  -webkit-transform: rotate(-5deg);
+  font-size: 200px !important;
+}

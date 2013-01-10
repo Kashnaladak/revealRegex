@@ -20,7 +20,7 @@ body {
 
 .reveal {
   font-family: "Fjalla One", sans-serif;
-  font-size: 36px;
+  font-size: 100px;
   font-weight: 200;
   letter-spacing: -0.02em;
   color: #222222;
@@ -28,7 +28,7 @@ body {
 
 ::selection {
   color: white;
-  background: #134674;
+  background: black;
   text-shadow: none;
 }
 
@@ -58,7 +58,7 @@ body {
  * LINKS
  *********************************************/
 .reveal a:not(.image) {
-  color: #3b759e;
+  color: #aa0000;
   text-decoration: none;
   -webkit-transition: color 0.15s ease;
   -moz-transition: color 0.15s ease;
@@ -68,14 +68,14 @@ body {
 }
 
 .reveal a:not(.image):hover {
-  color: #74a7cb;
+  color: #ff1111;
   text-shadow: none;
   border: none;
 }
 
 .reveal .roll span:after {
   color: #fff;
-  background: #264c66;
+  background: #5d0000;
 }
 
 /*********************************************
@@ -95,7 +95,7 @@ body {
 
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
-  border-color: #3b759e;
+  border-color: #aa0000;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
 }
 
@@ -104,38 +104,38 @@ body {
  *********************************************/
 .reveal .controls div.navigate-left,
 .reveal .controls div.navigate-left.enabled {
-  border-right-color: #3b759e;
+  border-right-color: #aa0000;
 }
 
 .reveal .controls div.navigate-right,
 .reveal .controls div.navigate-right.enabled {
-  border-left-color: #3b759e;
+  border-left-color: #aa0000;
 }
 
 .reveal .controls div.navigate-up,
 .reveal .controls div.navigate-up.enabled {
-  border-bottom-color: #3b759e;
+  border-bottom-color: #aa0000;
 }
 
 .reveal .controls div.navigate-down,
 .reveal .controls div.navigate-down.enabled {
-  border-top-color: #3b759e;
+  border-top-color: #aa0000;
 }
 
 .reveal .controls div.navigate-left.enabled:hover {
-  border-right-color: #74a7cb;
+  border-right-color: #ff1111;
 }
 
 .reveal .controls div.navigate-right.enabled:hover {
-  border-left-color: #74a7cb;
+  border-left-color: #ff1111;
 }
 
 .reveal .controls div.navigate-up.enabled:hover {
-  border-bottom-color: #74a7cb;
+  border-bottom-color: #ff1111;
 }
 
 .reveal .controls div.navigate-down.enabled:hover {
-  border-top-color: #74a7cb;
+  border-top-color: #ff1111;
 }
 
 /*********************************************
@@ -146,10 +146,45 @@ body {
 }
 
 .reveal .progress span {
-  background: #3b759e;
+  background: #aa0000;
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -ms-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -o-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+}
+
+strong {
+  color: #A00;
+}
+
+.huge {
+  font-size: 200px !important;
+}
+
+.pattern {
+  color: #BF6718;
+}
+
+.match {
+  color: #8C0000;
+}
+
+.nomatch {
+  color: #888;
+}
+
+.ok:after {
+  content: "\2714";
+  color: #080;
+}
+
+.nok:after {
+  content: "\2717";
+  color: #F00;
+}
+
+.subject {
+  -webkit-transform: rotate(-5deg);
+  font-size: 200px !important;
 }
