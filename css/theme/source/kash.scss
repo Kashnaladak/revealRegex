@@ -12,6 +12,8 @@
 
 // Include theme-specific fonts
 @import url(http://fonts.googleapis.com/css?family=Fjalla+One);
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans+Mono);
+@import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700);
 
 // Override theme settings (see ../template/settings.scss)
 $mainFont: 'Fjalla One', sans-serif;
@@ -42,18 +44,24 @@ $selectionBackgroundColor: #000;
 strong {
   color: #A00;
 }
+
 .huge {
   font-size: 200px !important;
 }
+
 .pattern {
   color: #BF6718;
+  font-family: 'Inconsolata' !important;
 }
+
 .match {
   color: #8C0000;
 }
+
 .nomatch {
   color: #888;
 }
+
 .ok:after {
   content: "\2714";
   color: #080;
@@ -62,7 +70,12 @@ strong {
   content: "\2717";
   color: #F00;
 }
+
 .subject {
   -webkit-transform: rotate(-5deg);
   font-size: 200px !important;
+}
+
+.code {
+  font-family: 'Droid Sans Mono' !important;
 }

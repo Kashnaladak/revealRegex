@@ -1,4 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Fjalla+One);
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans+Mono);
+@import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700);
 /**
  * Sky theme for reveal.js.
  * 
@@ -164,6 +166,7 @@ strong {
 
 .pattern {
   color: #BF6718;
+  font-family: "Inconsolata" !important;
 }
 
 .match {
@@ -187,4 +190,8 @@ strong {
 .subject {
   -webkit-transform: rotate(-5deg);
   font-size: 200px !important;
+}
+
+.code {
+  font-family: "Droid Sans Mono" !important;
 }
