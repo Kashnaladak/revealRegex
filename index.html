@@ -101,8 +101,8 @@
         </section>
 
         <section>
-            <p class="huge">\xE7</p>
-            <p class="huge">\u20AC</p>
+            <p class="huge">\xE7 (ç)</p>
+            <p class="huge">\u20AC (€)</p>
         </section>
 
 
@@ -112,8 +112,478 @@
         </section>
 
         <section>
-            <p></p>
-            <p></p>
+            <p>int i</p>
+            <p>int j</p>
+        </section>
+
+        <section>
+            <p>"'i' or 'j'"</p>
+            <p>[ij]</p>
+        </section>
+
+        <section>
+            <p>int i</p>
+            <p>int j</p>
+            <p>int [ij]</p>
+        </section>
+
+        <section>
+            <p>int a</p>
+            <p>int c</p>
+            <p>...</p>
+            <p>int z</p>
+        </section>
+
+        <section>
+            <p>"anything except 'b'"</p>
+            <p>[^b]</p>
+        </section>
+
+        <section>
+            <p>int [^b]</p>
+        </section>
+
+        <section>
+            <p>int i = 0</p>
+            <p>int i = 1</p>
+            <p>...</p>
+        </section>
+
+        <section>
+            <p>"range from '0' to '9'"</p>
+            <p>[0-9]</p>
+        </section>
+
+        <section>
+            <p>int i = [0-9]</p>
+        </section>
+
+        <section>
+            <p>int a</p>
+            <p>int b</p>
+            <p>int c</p>
+            <p>int x</p>
+            <p>int y</p>
+            <p>int z</p>
+        </section>
+
+        <section>
+            <p>Union of two classes</p>
+            <p>[..[..]]</p>
+        </section>
+
+        <section>
+            <p>int [a-c[x-z]]</p>
+        </section>
+
+        <section>
+            <p>int a</p>
+            <p>int b</p>
+            <p>int d</p>
+            <p>int e</p>
+        </section>
+
+        <section>
+            <p>Intersection of two classes</p>
+            <p>[...&&[...]]</p>
+        </section>
+
+        <section>
+            <p>int [a-e&&[^c]]</p>
+        </section>
+
+        <section>
+            <p>\d = digit = [0-9]</p>
+            <p>\D = non-digit = [^0-9]</p>
+        </section>
+
+        <section>
+            <p>\s = whitespace = [ \t\n\x0B\f\r]</p>
+            <p>\S = non-whitespace = [^\s]</p>
+        </section>
+
+        <section>
+            <p>\w = word = [a-zA-Z_0-9]</p>
+            <p>\W = non-word = [^\w]</p>
+        </section>
+
+        <section>
+            <p>\p{Digit} = digit = [0-9]</p>
+            <p>\p{Punct} = punctuation = [!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]</p>
+        </section>
+
+        <section>
+            <p>\p{In....}</p>
+            <p>\p{InGreek} = [\u0370 - \u03FF]</p>
+        </section>
+
+        <section>
+            <p>\p{InEgyptian Hieroglyphs}</p>
+            <p>\p{InPlaying Cards}</p>
+            <p>\p{InEmoticons}</p>
+        </section>
+
+        <section>
+            <p>.</p>
+        </section>
+
+        <section>
+            <p>"Any character except \n"</p>
+        </section>
+
+        <!-- =================== Logical Operators =================== -->
+
+        <section>
+            <p class="subject">Logical Operators</p>
+        </section>
+
+        <section>
+            <p>XY</p>
+            <p>X|Y</p>
+        </section>
+
+        <section>
+            <p>\d\w</p>
+            <p>\d|\w</p>
+        </section>
+
+        <!-- =================== Boundary Matchers =================== -->
+
+        <section>
+            <p class="subject">Boundary Matchers</p>
+        </section>
+
+        <section>
+            <p>^ = "Start of a line"</p>
+            <p>$ = "End of a line"</p>
+        </section>
+
+        <section>
+            <p>^a</p>
+            <p>^[^a]</p>
+            <p>x$</p>
+            <p>\$$</p>
+            <p>^$</p>
+        </section>
+
+        <section>
+            <p>Line terminators:</p>
+            <p>\n = newline</p>
+            <p>carriage-return = \r</p>
+            <p>next-line = \u0085</p>
+            <p>line-separator = \u2028</p>
+            <p>paragraph-separator = \u2029</p>
+        </section>
+
+        <section>
+            <p>\b = word delimiter</p>
+        </section>
+
+        <section>
+            <p>\bfoo\b</p>
+            <p>foo</p>
+            <p>foobar</p>
+        </section>
+
+        <section>
+            <p>\A = beginning of input</p>
+            <p>\z = end of input</p>
+            <p>\Z = end of input except final terminator</p>
+        </section>
+
+        <section>
+            <p>All of these are "zero-length"</p>
+        </section>
+
+        <!-- =================== Repetition & Quantifiers =================== -->
+
+        <section>
+            <p class="subject">Repetition & Quantifiers</p>
+        </section>
+
+        <section>
+            <p>X*</p>
+            <p>"X, zero or more times"</p>
+        </section>
+
+        <section>
+            <p>X+</p>
+            <p>"X, one or more times"</p>
+        </section>
+
+        <section>
+            <p>X?</p>
+            <p>"X, zero or one time"</p>
+        </section>
+
+        <section>
+            <p>X{n,m}</p>
+            <p>"X, at least 'n' times and at most 'm' times"</p>
+        </section>
+
+        <section>
+            <p>X{n,}</p>
+            <p>"X, at least 'n' times"</p>
+        </section>
+
+        <section>
+            <p>X{n}</p>
+            <p>"X, exactly 'n' times"</p>
+        </section>
+
+        <section>
+            <p>There are 3 flavors of quantifiers</p>
+        </section>
+
+        <section>
+            <p>Greedy (easy to understand)</p>
+            <p>Reluctant (also easy)</p>
+            <p>Possessive (omg... the horror)</p>
+        </section>
+
+        <section>
+            <table>
+                <tr>
+                    <td>Greedy</td><td>Reluctant</td><td>Possessive</td>
+                </tr>
+                <tr>
+                    <td>X?</td><td>X??</td><td>X?+</td>
+                </tr>
+                <tr>
+                    <td>X*</td><td>X*?</td><td>X*+</td>
+                </tr>
+                <tr>
+                    <td>X+</td><td>X+?</td><td>X++</td>
+                </tr>
+                <tr>
+                    <td>X{n}</td><td>X{n}?</td><td>X{n}+</td>
+                </tr>
+                <tr>
+                    <td>X{n,}</td><td>X{n,}?</td><td>X{n,}+</td>
+                </tr>
+                <tr>
+                    <td>X{n,m}</td><td>X{n,m}?</td><td>X{n,m}+</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <p>Greedy quantifiers try to match as much as possible</p>
+        </section>
+
+        <section>
+            <p>00010001</p>
+            <p>.*1</p>
+            <p>00010001</p>
+        </section>
+
+        <section>
+            <p>Reluctant quantifiers try to match as little as possible</p>
+        </section>
+
+        <section>
+            <p>00010001</p>
+            <p>.*?1</p>
+            <p>00010001</p>
+        </section>
+
+        <section>
+            <p>Possessive quantifiers try to match as much as possible, but only look at each character once</p>
+        </section>
+
+        <section>
+            <p>00010001</p>
+            <p>.*?1</p>
+            <p>No match! .* eats all the input!</p>
+        </section>
+
+        <section>
+            <p>So why would you ever use possessive quantifiers?</p>
+        </section>
+
+        <section>
+            <p>Regex optimization!</p>
+        </section>
+
+        <section>
+            <p>&lt;h1&gt;</p>
+            <p>&lt;.*&gt;</p>
+            <table>
+                <tr>
+                    <td>&lt;</td><td>&lt;h1&gt;</td>
+                    <td>&lt;.*</td><td>&lt;h1&gt;</td>
+                    <td>&lt;.*</td><td>&lt;h1&gt;</td>
+                    <td>&lt;.*&gt;</td><td>&lt;h1&gt;</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <p>&lt;h1&gt;</p>
+            <p>&lt;.*+&gt;</p>
+            <table>
+                <tr>
+                    <td>&lt;</td><td>&lt;h1&gt;</td>
+                    <td>&lt;.*</td><td>&lt;h1&gt;</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <p>&lt;h1&gt;</p>
+            <p>&lt;\w*&gt;</p>
+            <p>&lt;\w*+&gt;</p>
+        </section>
+
+        <!-- =================== Quoting =================== -->
+
+        <section>
+            <p class="subject">Quoting</p>
+        </section>
+
+        <section>
+            <p>\Q = start of quote</p>
+            <p>\E = end of quote</p>
+        </section>
+
+        <section>
+            <p>\Qhttp://www.groupon.\E.*</p>
+        </section>
+
+        <!-- =================== Grouping & Backreferences =================== -->
+
+        <section>
+            <p class="subject">Grouping & Backreferences</p>
+        </section>
+
+        <section>
+            <p>(X)</p>
+            <p>"X as a captured group"</p>
+        </section>
+
+        <section>
+            <p>Allows for further reference of the captured group</p>
+        </section>
+
+        <section>
+            <p>(?:X)</p>
+            <p>"X as a non-captured group"</p>
+        </section>
+
+        <section>
+            <table>
+                <tr>
+                    <td colspan="4">group 0</td>
+                </tr>
+
+                <tr>
+                    <td>(\d{1,3})\.</td><td>(\d{1,3})\.</td><td>(\d{1,3})\.</td><td>(\d{1,3})</td>
+                </tr>
+
+                <tr>
+                    <td>group 1</td><td>group 2</td><td>group 3</td><td>group 4</td>
+                </tr>
+
+            </table>
+        </section>
+
+        <section>
+            <p>\n</p>
+            <p>\1</p>
+        </section>
+
+        <section>
+            <p>&lt;(head)&gt;.*&lt;/\1&gt;</p>
+        </section>
+
+        <!-- =================== Flags =================== -->
+
+        <section>
+            <p class="subject">Flags</p>
+        </section>
+
+        <section>
+            <p>(?f)X</p>
+            <p>(?-f)X</p>
+        </section>
+
+        <section>
+            <p>i = case insensitive</p>
+            <p>d = unix lines</p>
+            <p>m = multiline</p>
+            <p>s = dot all</p>
+            <p>u = unicode case</p>
+            <p>x = comments</p>
+        </section>
+
+        <section>
+            <p>(?iu)X</p>
+            <p>(?s-m)X</p>
+            <p>(?mdx-i)X</p>
+        </section>
+
+        <!-- =================== Special Constructs =================== -->
+
+        <section>
+            <p class="subject">Special Constructs</p>
+        </section>
+
+        <section>
+            <p>Number that contains the sequence "555"</p>
+        </section>
+
+        <section>
+            <p>\d+</p>
+        </section>
+
+        <section>
+            <p>(?=.*555.*)\d+</p>
+        </section>
+
+        <section>
+            <p>(?=X)Y</p>
+            <p>"Y, so long as X is true in Y"</p>
+        </section>
+
+        <section>
+            <p>(?!X)Y</p>
+            <p>"Y, so long as X is false in Y"</p>
+        </section>
+
+        <section>
+            <p>Any 'h' that has a 'c' before<sub>(but we don't want to match the 'c')</sub></p>
+        </section>
+
+        <section>
+            <p>(?<=X)Y</p>
+            <p>"Y, so long as X occurs before Y"</p>
+        </section>
+
+        <section>
+            <p>(?<!X)Y</p>
+            <p>"Y, so long as X doesn't occur before Y"</p>
+        </section>
+
+        <!-- =================== Regex in Java =================== -->
+
+        <section>
+            <p class="subject">Regex in Java</p>
+        </section>
+
+        <section>
+            <code>Pattern pattern = Pattern.compile("\d{2}");</code>
+
+            <code>Pattern pattern = Pattern.compile("\d{2}“, Pattern.UNIX_LINES + Pattern.DOTALL);</code>
+
+            <code>Matcher matcher = pattern.matcher("12");</code>
+
+            <code>matcher.matches();</code>
+
+            <code>matcher.find();</code>
+
+            <code>matcher.group(); //same as .group(0)</code>
+
+            <code>matcher.group(1);</code>
         </section>
 
     </div>
