@@ -47,18 +47,18 @@
             <p>A  <strong>pattern</strong> <small>(set of symbols)</small> to describe <strong>text</strong></p>
         </section>
 
-
+        <!-- =================== Characters =================== -->
 
         <section>
             <p class="subject">Characters</p>
         </section>
 
         <section>
-            <p class="huge">X</p>
+            <p class="huge code">X</p>
         </section>
 
         <section>
-            <p class="huge">XY</p>
+            <p class="huge code">XY</p>
         </section>
 
         <section>
@@ -81,17 +81,21 @@
         </section>
 
         <section>
-            <p class="huge" style="letter-spacing: 15px;">( ) [ ] ^ $ \ . + * ? | </p>
+            <p>However, some characters are <strong>special</strong>...</p>
         </section>
 
         <section>
-            <p class="huge pattern">\+</p>
+            <p class="huge code" style="letter-spacing: 15px;">( ) [ ] ^ $ \ . + * ? | </p>
         </section>
 
         <section>
-            <p class="huge code">1+1</p>
-            <p class="fragment huge nok pattern code">1+1</p>
-            <p class="fragment huge ok pattern code">1\+1</p>
+            <p class="huge code">\+</p>
+        </section>
+
+        <section>
+            <p class="huge code input">1+1</p>
+            <p class="fragment huge nok code">1+1</p>
+            <p class="fragment huge ok code">1\+1</p>
         </section>
 
         <section>
@@ -101,95 +105,90 @@
         </section>
 
         <section>
-            <p class="huge">\xE7 (ç)</p>
-            <p class="huge">\u20AC (€)</p>
+            <p class="huge code">\xE7 <small>(ç)</small></p>
+            <p class="huge code">\u20AC <small>(€)</small></p>
         </section>
 
-
+        <!-- =================== Character Classes =================== -->
 
         <section>
             <p class="subject">Character Classes</p>
         </section>
 
         <section>
-            <p>int i</p>
-            <p>int j</p>
+            <p class="huge code">int i</p>
+            <p class="huge code">int j</p>
         </section>
 
         <section>
-            <p>"'i' or 'j'"</p>
-            <p>[ij]</p>
+            <p class="huge code"><span class="pattern">[</span>ij<span class="pattern">]</span></p>
+            <p class="desc">'i' or 'j'</p>
         </section>
 
         <section>
-            <p>int i</p>
-            <p>int j</p>
-            <p>int [ij]</p>
+            <p class="huge input">int i</p>
+            <p class="huge input">int j</p>
+            <p class="huge code">int [ij]</p>
         </section>
 
         <section>
-            <p>int a</p>
-            <p>int c</p>
-            <p>...</p>
-            <p>int z</p>
+            <p class="big code">int a</p>
+            <p class="big code">...</p>
+            <p class="big code">int z</p>
         </section>
 
         <section>
-            <p>"anything except 'b'"</p>
-            <p>[^b]</p>
+            <p class="huge code"><span class="pattern">[^</span>b<span class="pattern">]</span></p>
+            <p class="desc">anything except 'b'</p>
         </section>
 
         <section>
-            <p>int [^b]</p>
+            <p class="huge code">int [^b]</p>
         </section>
 
         <section>
-            <p>int i = 0</p>
-            <p>int i = 1</p>
-            <p>...</p>
+            <p class="big code">int i = 0</p>
+            <p class="big code">int i = 1</p>
+            <p class="big code">...</p>
         </section>
 
         <section>
-            <p>"range from '0' to '9'"</p>
-            <p>[0-9]</p>
+            <p class="huge code"><span class="pattern">[</span>0<span class="pattern">-</span>9<span class="pattern">]</span></p>
+            <p class="desc">range from '0' to '9'</p>
         </section>
 
         <section>
-            <p>int i = [0-9]</p>
+            <p class="big code nobreak">int i = [0-9]</p>
         </section>
 
         <section>
-            <p>int a</p>
-            <p>int b</p>
-            <p>int c</p>
-            <p>int x</p>
-            <p>int y</p>
-            <p>int z</p>
+            <p class="large nobreak">int a &nbsp;&nbsp;&nbsp; int b &nbsp;&nbsp;&nbsp; int c</p>
+            <p class="large nobreak">int x &nbsp;&nbsp;&nbsp; int y &nbsp;&nbsp;&nbsp; int z </p>
         </section>
 
         <section>
-            <p>Union of two classes</p>
-            <p>[..[..]]</p>
+            <p class="huge code"><span class="pattern">[</span>..<span class="pattern">[</span>..<span class="pattern">]]</span></p>
+            <p class="desc">union of two classes</p>
         </section>
 
         <section>
-            <p>int [a-c[x-z]]</p>
+            <p class="big code nobreak">int [a-c[x-z]]</p>
         </section>
 
         <section>
-            <p>int a</p>
-            <p>int b</p>
-            <p>int d</p>
-            <p>int e</p>
+            <p class="large">int a</p>
+            <p class="large">int b</p>
+            <p class="large">int d</p>
+            <p class="large">int e</p>
         </section>
 
         <section>
-            <p>Intersection of two classes</p>
-            <p>[...&&[...]]</p>
+            <p class="huge code nobreak" style="margin-left: -15%;"><span class="pattern">[</span>...<span class="pattern">&&[</span>...<span class="pattern">]]</span></p>
+            <p class="desc">intersection of two classes</p>
         </section>
 
         <section>
-            <p>int [a-e&&[^c]]</p>
+            <p class="big code nobreak" style="margin-left: -15%">int [a-e&&[^c]]</p>
         </section>
 
         <section>

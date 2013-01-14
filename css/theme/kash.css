@@ -160,21 +160,46 @@ strong {
   color: #A00;
 }
 
+small {
+  color: #888;
+}
+
+.nobreak {
+  overflow: visible !important;
+  white-space: nowrap !important;
+}
+
+.pattern {
+  color: #DD0B0B;
+}
+
+.code, .pattern, .input {
+  font-weight: bold !important;
+  font-family: "Inconsolata" !important;
+}
+
 .huge {
   font-size: 200px !important;
 }
 
-.pattern {
-  color: #BF6718;
-  font-family: "Inconsolata" !important;
+.big {
+  font-size: 150px !important;
+}
+
+.large {
+  font-size: 120px !important;
 }
 
 .match {
-  color: #8C0000;
+  color: #638C04;
 }
 
 .nomatch {
-  color: #888;
+  color: #AAA;
+}
+
+.input, .desc {
+  color: #097887;
 }
 
 .ok:after {
@@ -190,8 +215,4 @@ strong {
 .subject {
   -webkit-transform: rotate(-5deg);
   font-size: 200px !important;
-}
-
-.code {
-  font-family: "Droid Sans Mono" !important;
 }
