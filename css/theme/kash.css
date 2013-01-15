@@ -216,3 +216,32 @@ small {
   -webkit-transform: rotate(-5deg);
   font-size: 200px !important;
 }
+
+.quanTable {
+  border-collapse: collapse;
+  margin-left: -10% !important;
+}
+
+.quanTable td {
+  text-align: center !important;
+}
+
+.red {
+  color: #DD0B0B;
+}
+
+.green {
+  color: #080;
+}
+
+.blue {
+  color: #097887;
+}
+
+.titleTable {
+  margin: 0 auto !important;
+}
+
+.titleTable td {
+  vertical-align: middle;
+}

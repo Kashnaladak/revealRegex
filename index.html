@@ -36,7 +36,14 @@
     <div class="slides">
 
         <section>
-            <h1>The title should go here</h1>
+            <p>
+            <table class="titleTable">
+                <tr>
+                    <td><span class="huge code">^</span></td><td><img style="border: none; box-shadow: none" src="img/trex.png"></td><td><span class="huge code">$</span></td>
+                </tr>
+            </table>
+            </p>
+            <p>Tyrannosaurus Regex</p>
         </section>
 
         <section>
@@ -300,95 +307,96 @@
             <p class="desc">X, zero or more times</p>
         </section>
 
-        <section>
-            <p>X+</p>
-            <p>"X, one or more times"</p>
+        <section>\E =
+            <p class="huge code">X<strong>+</strong></p>
+            <p class="desc">X, one or more times</p>
         </section>
 
         <section>
-            <p>X?</p>
-            <p>"X, zero or one time"</p>
+            <p class="huge code">X<strong>?</strong></p>
+            <p class="desc">X, zero or one time</p>
         </section>
 
         <section>
-            <p>X{n,m}</p>
-            <p>"X, at least 'n' times and at most 'm' times"</p>
+            <p class="huge code">X<Strong>{n,m}</Strong></p>
+            <p class="desc">X, at least 'n' times and at most 'm' times</p>
         </section>
 
         <section>
-            <p>X{n,}</p>
-            <p>"X, at least 'n' times"</p>
+            <p class="huge code">X<strong>{n,}</strong></p>
+            <p class="desc">X, at least 'n' times</p>
         </section>
 
         <section>
-            <p>X{n}</p>
-            <p>"X, exactly 'n' times"</p>
+            <p class="huge code">X<strong>{n}</strong></p>
+            <p class="desc">"X, exactly 'n' times</p>
         </section>
 
         <section>
-            <p>There are 3 flavors of quantifiers</p>
+            <p class="large">There are 3 flavors of quantifiers</p>
         </section>
 
         <section>
-            <p>Greedy (easy to understand)</p>
-            <p>Reluctant (also easy)</p>
-            <p>Possessive (omg... the horror)</p>
+            <p>Greedy <small>(easy to understand)</small></p>
+            <p class="fragment">Reluctant <small>(also easy)</small></p>
+            <p class="fragment">Possessive <small><strong>(omg... the horror)</strong></small></p>
         </section>
 
         <section>
-            <table>
+            <table class="quanTable">
                 <tr>
                     <td>Greedy</td><td>Reluctant</td><td>Possessive</td>
                 </tr>
                 <tr>
-                    <td>X?</td><td>X??</td><td>X?+</td>
+                    <td>X<span class="red">?</span></td><td>X<span class="green">??</span></td><td>X<span class="blue">?+</span></td>
                 </tr>
                 <tr>
-                    <td>X*</td><td>X*?</td><td>X*+</td>
+                    <td>X<span class="red">*</span></td><td>X<span class="green">*?</span></td><td>X<span class="blue">*+</span></td>
                 </tr>
                 <tr>
-                    <td>X+</td><td>X+?</td><td>X++</td>
+                    <td>X<span class="red">+</span></td><td>X<span class="green">+?</span></td><td>X<span class="blue">++</span></td>
                 </tr>
                 <tr>
-                    <td>X{n}</td><td>X{n}?</td><td>X{n}+</td>
+                    <td>X<span class="red">{n}</span></td><td>X<span class="green">{n}?</span></td><td>X<span class="blue">{n}+</span></td>
                 </tr>
                 <tr>
-                    <td>X{n,}</td><td>X{n,}?</td><td>X{n,}+</td>
+                    <td>X<span class="red">{n,}</span></td><td>X<span class="green">{n,}?</span></td><td>X<span class="blue">{n,}+</span></td>
                 </tr>
                 <tr>
-                    <td>X{n,m}</td><td>X{n,m}?</td><td>X{n,m}+</td>
+                    <td>X<span class="red">{n,m}</span></td><td>X<span class="green">{n,m}?</span></td><td>X<span class="blue">{n,m}+</span></td>
                 </tr>
             </table>
         </section>
 
         <section>
-            <p>Greedy quantifiers try to match as much as possible</p>
+            <p><strong>Greedy</strong> quantifiers try to match as <strong>much</strong> as possible</p>
         </section>
 
         <section>
             <p>00010001</p>
-            <p>.*1</p>
-            <p>00010001</p>
+            <p class="code pattern">.*1</p>
+            <p class="match">00010001</p>
         </section>
 
         <section>
-            <p>Reluctant quantifiers try to match as little as possible</p>
-        </section>
-
-        <section>
-            <p>00010001</p>
-            <p>.*?1</p>
-            <p>00010001</p>
-        </section>
-
-        <section>
-            <p>Possessive quantifiers try to match as much as possible, but only look at each character once</p>
+            <p><strong>Reluctant</strong> quantifiers try to match as <strong>little</strong> as possible</p>
         </section>
 
         <section>
             <p>00010001</p>
-            <p>.*?1</p>
-            <p>No match! .* eats all the input!</p>
+            <p class="code pattern">.*?1</p>
+            <p><span class="match">0001</span>0001</p>
+        </section>
+
+        <section>
+            <p><strong>Possessive</strong> quantifiers try to match as much as possible, but only look at <strong>each character once</strong></p>
+        </section>
+
+        <section>
+            <p>00010001</p>
+            <p class="code pattern">.*?1</p>
+            <p><strong>No match!</strong></p>
+            <p></p><span class="code">.*</span> eats all the input!</p>
         </section>
 
         <section>
@@ -396,37 +404,13 @@
         </section>
 
         <section>
-            <p>Regex optimization!</p>
+            <p class="big">Regex optimization!</p>
         </section>
 
         <section>
-            <p>&lt;h1&gt;</p>
-            <p>&lt;.*&gt;</p>
-            <table>
-                <tr>
-                    <td>&lt;</td><td>&lt;h1&gt;</td>
-                    <td>&lt;.*</td><td>&lt;h1&gt;</td>
-                    <td>&lt;.*</td><td>&lt;h1&gt;</td>
-                    <td>&lt;.*&gt;</td><td>&lt;h1&gt;</td>
-                </tr>
-            </table>
-        </section>
-
-        <section>
-            <p>&lt;h1&gt;</p>
-            <p>&lt;.*+&gt;</p>
-            <table>
-                <tr>
-                    <td>&lt;</td><td>&lt;h1&gt;</td>
-                    <td>&lt;.*</td><td>&lt;h1&gt;</td>
-                </tr>
-            </table>
-        </section>
-
-        <section>
-            <p>&lt;h1&gt;</p>
-            <p>&lt;\w*&gt;</p>
-            <p>&lt;\w*+&gt;</p>
+            <p class="big">&lt;h1&gt;</p>
+            <p class="fragment big code pattern">&lt;\w*&gt;</p>
+            <p class="fragment big code pattern">&lt;\w*+&gt;</p>
         </section>
 
         <!-- =================== Quoting =================== -->
@@ -436,12 +420,14 @@
         </section>
 
         <section>
-            <p>\Q = start of quote</p>
-            <p>\E = end of quote</p>
+            <p class="huge code">\Q</p>
+            <p class="desc">start of quote</p>
+            <p class="huge code">\E</p>
+            <p class="desc">end of quote</p>
         </section>
 
         <section>
-            <p>\Qhttp://www.groupon.\E.*</p>
+            <p class="code" style="margin-left: -15%"><span class="pattern">\Q</span>http://www.groupon.<span class="pattern">\E</span>.*</p>
         </section>
 
         <!-- =================== Grouping & Backreferences =================== -->
@@ -451,8 +437,8 @@
         </section>
 
         <section>
-            <p>(X)</p>
-            <p>"X as a captured group"</p>
+            <p class="huge code"><strong>(</strong>X<strong>)</strong></p>
+            <p class="desc">X as a captured group</p>
         </section>
 
         <section>
@@ -460,34 +446,21 @@
         </section>
 
         <section>
-            <p>(?:X)</p>
-            <p>"X as a non-captured group"</p>
+            <p class="huge code"><strong>(?:</strong>X<strong>)</strong></p>
+            <p class="desc">X as a non-captured group</p>
         </section>
 
         <section>
-            <table>
-                <tr>
-                    <td colspan="4">group 0</td>
-                </tr>
-
-                <tr>
-                    <td>(\d{1,3})\.</td><td>(\d{1,3})\.</td><td>(\d{1,3})\.</td><td>(\d{1,3})</td>
-                </tr>
-
-                <tr>
-                    <td>group 1</td><td>group 2</td><td>group 3</td><td>group 4</td>
-                </tr>
-
-            </table>
+            <p class="large code" style="margin-left: -15%"><strong>(</strong>\d{1,3}<strong><strong>)</strong></strong>\.<strong>(</strong>\d{1,3}<strong>)</strong></p>
         </section>
 
         <section>
-            <p>\n</p>
-            <p>\1</p>
+            <p class="huge code">\n</p>
+            <p class="huge code">\1</p>
         </section>
 
         <section>
-            <p>&lt;(head)&gt;.*&lt;/\1&gt;</p>
+            <p class="large code">&lt;(head)&gt;.*&lt;/\1&gt;</p>
         </section>
 
         <!-- =================== Flags =================== -->
@@ -497,23 +470,23 @@
         </section>
 
         <section>
-            <p>(?f)X</p>
-            <p>(?-f)X</p>
+            <p class="huge code"><strong>(?f)</strong>X</p>
+            <p class="huge code"><strong>(?-f)</strong>X</p>
         </section>
 
         <section>
-            <p>i = case insensitive</p>
-            <p>d = unix lines</p>
-            <p>m = multiline</p>
-            <p>s = dot all</p>
-            <p>u = unicode case</p>
-            <p>x = comments</p>
+            <p><strong>i</strong> = case insensitive</p>
+            <p><strong>d</strong> = unix lines</p>
+            <p><strong>m</strong> = multiline</p>
+            <p><strong>s</strong> = dot all</p>
+            <p><strong>u</strong> = unicode case</p>
+            <p><strong>x</strong> = comments</p>
         </section>
 
         <section>
-            <p>(?iu)X</p>
-            <p>(?s-m)X</p>
-            <p>(?mdx-i)X</p>
+            <p class="huge code"><strong>(?iu)</strong>X</p>
+            <p class="huge code"><strong>(?s-m)</strong>X</p>
+            <p class="huge code"><strong>(?mdx-i)</strong>X</p>
         </section>
 
         <!-- =================== Special Constructs =================== -->
@@ -523,61 +496,39 @@
         </section>
 
         <section>
-            <p>Number that contains the sequence "555"</p>
+            <p class="large">Number that contains the sequence "555"</p>
         </section>
 
         <section>
-            <p>\d+</p>
+            <p class="huge code">\d+</p>
         </section>
 
         <section>
-            <p>(?=.*555.*)\d+</p>
+            <p class="big code nobreak">(?=.*555.*)\d+</p>
         </section>
 
         <section>
-            <p>(?=X)Y</p>
-            <p>"Y, so long as X is true in Y"</p>
+            <p class="huge code"><strong>(?=X)</strong>Y</p>
+            <p class="desc nobreak">Y, so long as X is true in Y</p>
         </section>
 
         <section>
-            <p>(?!X)Y</p>
-            <p>"Y, so long as X is false in Y"</p>
+            <p class="huge code"><strong>(?!X)</strong>Y</p>
+            <p class="desc nobreak">Y, so long as X is false in Y</p>
         </section>
 
         <section>
-            <p>Any 'h' that has a 'c' before<sub>(but we don't want to match the 'c')</sub></p>
+            <p>Any 'h' that has a 'c' before<small>(but we don't want to match the 'c')</small></p>
         </section>
 
         <section>
-            <p>(?<=X)Y</p>
-            <p>"Y, so long as X occurs before Y"</p>
+            <p class="huge code"><strong>(?&lt;=X)</strong>Y</p>
+            <p class="desc">Y, so long as X occurs before Y</p>
         </section>
 
         <section>
-            <p>(?<!X)Y</p>
-            <p>"Y, so long as X doesn't occur before Y"</p>
-        </section>
-
-        <!-- =================== Regex in Java =================== -->
-
-        <section>
-            <p class="subject">Regex in Java</p>
-        </section>
-
-        <section>
-            <code>Pattern pattern = Pattern.compile("\d{2}");</code>
-
-            <code>Pattern pattern = Pattern.compile("\d{2}“, Pattern.UNIX_LINES + Pattern.DOTALL);</code>
-
-            <code>Matcher matcher = pattern.matcher("12");</code>
-
-            <code>matcher.matches();</code>
-
-            <code>matcher.find();</code>
-
-            <code>matcher.group(); //same as .group(0)</code>
-
-            <code>matcher.group(1);</code>
+            <p class="huge code"><strong>(?&lt;!X)</strong>Y</p>
+            <p class="desc">Y, so long as X doesn't occur before Y</p>
         </section>
 
     </div>
