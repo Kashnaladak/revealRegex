@@ -192,42 +192,45 @@
         </section>
 
         <section>
-            <p>\d = digit = [0-9]</p>
-            <p>\D = non-digit = [^0-9]</p>
+            <p class="big code"><span class="pattern">\d</span> = [0-9]</p>
+            <p class="desc">digit</p>
+            <p class="big code"><span class="pattern">\D</span> = [^0-9]</p>
+            <p class="desc">non-digit</p>
         </section>
 
         <section>
-            <p>\s = whitespace = [ \t\n\x0B\f\r]</p>
-            <p>\S = non-whitespace = [^\s]</p>
+            <p class="big code nobreak" style="margin-left: -25%;"><span class="pattern">\s</span> = [ \t\n\x0B\f\r]</p>
+            <p class="desc">whitespace</p>
+            <p class="big code"><span class="pattern">\S</span> = [^\s]</p>
+            <p class="desc">non-whitespace</p>
         </section>
 
         <section>
-            <p>\w = word = [a-zA-Z_0-9]</p>
-            <p>\W = non-word = [^\w]</p>
+            <p class="big code nobreak" style="margin-left: -15%;"><span class="pattern">\w</span> = [a-zA-Z_0-9]</p>
+            <p class="desc">word</p>
+            <p class="big code nobreak"><span class="pattern">\W</span> = [^\w]</p>
+            <p class="desc">non-word</p>
         </section>
 
         <section>
-            <p>\p{Digit} = digit = [0-9]</p>
-            <p>\p{Punct} = punctuation = [!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]</p>
+            <p class="big code nobreak" style="margin-left: -15%;"><span class="pattern">\p{Digit}</span> = [0-9]</p>
+            <p class="desc">digit</p>
         </section>
 
         <section>
-            <p>\p{In....}</p>
-            <p>\p{InGreek} = [\u0370 - \u03FF]</p>
+            <p class="big pattern">\p{In....}</p>
+            <p class="big code">\p{InGreek}</p>
+            <p class="large code nobreak">[\u0370 - \u03FF]</p>
         </section>
 
         <section>
-            <p>\p{InEgyptian Hieroglyphs}</p>
-            <p>\p{InPlaying Cards}</p>
-            <p>\p{InEmoticons}</p>
+            <p class="code nobreak">\p{InPlaying Cards}</p>
+            <p class="code">\p{InEmoticons}</p>
         </section>
 
         <section>
-            <p>.</p>
-        </section>
-
-        <section>
-            <p>"Any character except \n"</p>
+            <p class="huge code">.</p>
+            <p class="desc">Any character except \n</p>
         </section>
 
         <!-- =================== Logical Operators =================== -->
@@ -237,13 +240,13 @@
         </section>
 
         <section>
-            <p>XY</p>
-            <p>X|Y</p>
+            <p class="huge code">XY</p>
+            <p class="huge code">X<span class="pattern">|</span>Y</p>
         </section>
 
         <section>
-            <p>\d\w</p>
-            <p>\d|\w</p>
+            <p class="huge code">\d\w</p>
+            <p class="huge code">\d<span class="pattern">|</span>\w</p>
         </section>
 
         <!-- =================== Boundary Matchers =================== -->
@@ -253,45 +256,37 @@
         </section>
 
         <section>
-            <p>^ = "Start of a line"</p>
-            <p>$ = "End of a line"</p>
+            <p class="huge code">^</p>
+            <p class="desc">start of a line</p>
+            <p class="huge code">$</p>
+            <p class="desc">end of a line</p>
         </section>
 
         <section>
-            <p>^a</p>
-            <p>^[^a]</p>
-            <p>x$</p>
-            <p>\$$</p>
-            <p>^$</p>
+            <p class="big code nobreak">^a &nbsp; ^[^a] &nbsp; x$</p>
+            <p class="big code">\$$ &nbsp;&nbsp; ^$</p>
         </section>
 
         <section>
-            <p>Line terminators:</p>
-            <p>\n = newline</p>
-            <p>carriage-return = \r</p>
-            <p>next-line = \u0085</p>
-            <p>line-separator = \u2028</p>
-            <p>paragraph-separator = \u2029</p>
+            <p class="huge code">\b</p>
+            <p class="desc">word delimiter</p>
         </section>
 
         <section>
-            <p>\b = word delimiter</p>
+            <p class="huge code"><span class="pattern">\b</span>foo<span class="pattern">\b</span></p>
+            <p class="fragment huge ok code">foo</p>
+            <p class="fragment huge nok code">foobar</p>
         </section>
 
         <section>
-            <p>\bfoo\b</p>
-            <p>foo</p>
-            <p>foobar</p>
+            <p class="huge code">\A</p>
+            <p class="desc">beginning of input</p>
+            <p class="huge code">\z</p>
+            <p class="desc">end of input</p>
         </section>
 
         <section>
-            <p>\A = beginning of input</p>
-            <p>\z = end of input</p>
-            <p>\Z = end of input except final terminator</p>
-        </section>
-
-        <section>
-            <p>All of these are "zero-length"</p>
+            <p>All of these are <br/><strong>zero-length</strong></p>
         </section>
 
         <!-- =================== Repetition & Quantifiers =================== -->
@@ -301,8 +296,8 @@
         </section>
 
         <section>
-            <p>X*</p>
-            <p>"X, zero or more times"</p>
+            <p class="huge code">X<strong>*</strong></p>
+            <p class="desc">X, zero or more times</p>
         </section>
 
         <section>
